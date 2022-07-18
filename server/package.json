@@ -1,28 +1,36 @@
 {
   "name": "propblock",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "This is SGP 3.0 ",
+  "main": "index.ts",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/index.js",
+    "start-comp": "tsc -w -p .",
+    "dev": "nodemon build/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samarpitsantoki/propblock.git"
+    "url": "git+https://github.com/SamarpitSantoki/propblock.git"
   },
-  "author": "",
+  "author": "Sarthak Paliwal",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samarpitsantoki/propblock/issues"
+    "url": "https://github.com/SamarpitSantoki/propblock/issues"
   },
-  "homepage": "https://github.com/samarpitsantoki/propblock#readme",
+  "homepage": "https://github.com/SamarpitSantoki/propblock#readme",
   "dependencies": {
-    "concurrently": "^7.2.2",
-    "express": "^4.18.1"
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.4",
+    "tsc": "^2.0.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.4",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
   }
 }

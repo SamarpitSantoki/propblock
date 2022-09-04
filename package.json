@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/samarpitsantoki/propblock#readme",
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "concurrently": "^7.2.2"
   },
   "devDependencies": {

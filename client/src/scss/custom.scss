@@ -6,9 +6,7 @@
 
 // Then add additional custom code here
 $theme-colors: (
-    'puregrey': #dfdfdf,
+    "puregrey": #dfdfdf,
     "puredark": black,
-    "info": tomato,
-    "danger": teal
 );
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap.scss";

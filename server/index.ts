@@ -1,19 +1,26 @@
 import express from 'express';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import path from 'path';
 import routes from './router';
+import cors from 'cors';
+import helmet from 'helmet';
 import mongoose from 'mongoose'
 import dbConnect from './config/database'
-//import dbConnect from './config/database'
 
 dotenv.config();
 
 const app = express()
-const PORT = process.env.PORT || 3000;
 
+app.use(helmet())
+app.use(cors())
+app.use(express.json())
 app.use(express.static(path.join(__dirname, "../build")));
 console.log(path.join(__dirname, "../build"));
 app.use("/api", routes);
+
+dbConnect()
+
+const PORT = process.env.PORT || 3000;
 
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));

@@ -1,13 +1,29 @@
 import { Routes, Route, Outlet } from "react-router-dom";
-import Login from "../pages/auth/Login";
 import HomePage from "../pages/HomePage";
 import { authRoutes } from "./AuthRoutes";
+import { govRoutes } from "./GovRoutes";
 import { marketRoutes } from "./MarketRoutes";
+import { userRoutes } from "./UserRoutes";
 
 function index() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />}/>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/user">
+        {userRoutes.map((route, index) => {
+          return (
+            <Route key={index} path={route.path} element={route.component} />
+          );
+        })}
+      </Route>
+      <Route path="/gov">
+        {govRoutes.map((route, index) => {
+          return (
+            <Route key={index} path={route.path} element={route.component} />
+          );
+        })}
+      </Route>
+
       <Route path="auth" element={<Outlet />}>
         {authRoutes.map((route, index) => (
           <Route key={index} path={route.path} element={route.component} />

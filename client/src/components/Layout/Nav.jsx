@@ -31,6 +31,9 @@ function NavBar(args) {
         <NavItem>
           <NavLink href="/user/profile">UserProfile</NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink href="/gov/profile">Government</NavLink>
+        </NavItem>
       </Nav>
       <NavbarText>Simple Text</NavbarText>
     </Navbar>

@@ -5,6 +5,7 @@ import { govRoutes } from "./GovRoutes";
 import { marketRoutes } from "./MarketRoutes";
 import { userRoutes } from "./UserRoutes";
 import User from "../pages/user";
+import Government from "../pages/gov";
 function index() {
   return (
     <Routes>
@@ -16,7 +17,7 @@ function index() {
           );
         })}
       </Route>
-      <Route path="/gov">
+      <Route path="/gov" element={<Government />}>
         {govRoutes.map((route, index) => {
           return (
             <Route key={index} path={route.path} element={route.component} />

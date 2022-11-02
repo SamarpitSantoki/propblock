@@ -12,7 +12,7 @@ function index() {
               <p class="proile-rating">
                 RANKINGS : <span>8/10</span>
               </p>
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
+              {/* <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                   <a
                     class="nav-link active"
@@ -39,14 +39,14 @@ function index() {
                     Timeline
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4">
             <div class="profile-work">
-              <p>WORK LINK</p>
+              <p>User Profile</p>
               <Link to="profile">Profile</Link>
               <br />
               <Link to="buyrequest">Buy Request</Link>

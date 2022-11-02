@@ -1,13 +1,14 @@
 import { redirect } from "react-router-dom";
+import { Row } from "reactstrap";
 
 // page with a form to register land
 function RegisterLand() {
   return (
     <div
-      style={{ marginTop: "6rem" }}
-      class=" container d-flex justify-content-center "
+      // style={{ marginTop: "6rem" }}
+      class="d-flex  "
     >
-      <div class="my-5">
+      <div>
         <form class="well " action=" " method="post" id="contact_form">
           <fieldset>
             <legend>Land Registration</legend>
@@ -28,40 +29,40 @@ function RegisterLand() {
                 </div>
               </div>
             </div>
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">Zip Code</label>
-              <div class="col-md-12 inputGroupContainer">
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-home"></i>
-                  </span>
-                  <input
-                    name="zip"
-                    placeholder="Zip Code"
-                    class="form-control"
-                    type="text"
-                  />
+            <Row sm={2}>
+              <div class="form-group">
+                <label class="col-md-4 control-label">Zip Code</label>
+                <div class="col-md-12 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-home"></i>
+                    </span>
+                    <input
+                      name="zip"
+                      placeholder="Zip Code"
+                      class="form-control"
+                      type="text"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="form-group">
-              <label class="col-md-4 control-label">City</label>
-              <div class="col-md-12 inputGroupContainer">
-                <div class="input-group">
-                  <span class="input-group-addon">
-                    <i class="glyphicon glyphicon-home"></i>
-                  </span>
-                  <input
-                    name="city"
-                    placeholder="city"
-                    class="form-control"
-                    type="text"
-                  />
+              <div class="form-group">
+                <label class="col-md-4 control-label">City</label>
+                <div class="col-md-12 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-home"></i>
+                    </span>
+                    <input
+                      name="city"
+                      placeholder="City"
+                      class="form-control"
+                      type="text"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </Row>
 
             <div class="form-group">
               <label class="col-md-4 control-label">State</label>
@@ -72,7 +73,7 @@ function RegisterLand() {
                   </span>
                   <input
                     name="city"
-                    placeholder="state"
+                    placeholder="State"
                     class="form-control"
                     type="text"
                   />

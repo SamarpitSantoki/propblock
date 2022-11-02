@@ -1,6 +1,8 @@
 function Profile() {
   return (
     <div class="tab-content profile-tab" id="myTabContent">
+      <legend>Profile</legend>
+
       <div
         class="tab-pane fade show active"
         id="home"

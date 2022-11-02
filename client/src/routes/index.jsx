@@ -4,12 +4,12 @@ import { authRoutes } from "./AuthRoutes";
 import { govRoutes } from "./GovRoutes";
 import { marketRoutes } from "./MarketRoutes";
 import { userRoutes } from "./UserRoutes";
-
+import User from "../pages/user";
 function index() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/user">
+      <Route path="/user" element={<User />}>
         {userRoutes.map((route, index) => {
           return (
             <Route key={index} path={route.path} element={route.component} />

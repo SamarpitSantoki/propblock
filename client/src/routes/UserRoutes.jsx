@@ -1,11 +1,11 @@
-import BuyRequest from "../pages/User/BuyRequest";
-import MyLands from "../pages/User/MyLands";
-import Profile from "../pages/User/Profile";
-import RegisterLand from "../pages/User/RegisterLand";
+import BuyRequest from "../pages/user/BuyRequest";
+import MyLands from "../pages/user/MyLands";
+import Profile from "../pages/user/Profile";
+import RegisterLand from "../pages/user/RegisterLand";
 //check AuthRoutes to understand how to declare routes
 export const userRoutes = [
-  { path: "profile", component: <Profile /> },
-  { path: "buyrequest", component: <BuyRequest /> },
-  { path: "mylands", component: <MyLands /> },
-  { path: "registerland", component: <RegisterLand /> },
+  { path:"profile", component: <Profile /> },
+  { path:"buyrequest", component: <BuyRequest /> },
+  { path:"mylands", component: <MyLands /> },
+  { path:"registerland", component: <RegisterLand /> },
 ];

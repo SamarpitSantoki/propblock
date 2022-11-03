@@ -43,7 +43,6 @@ console.log(path_1.default.join(__dirname, "../build"));
 app.use("/api", router_1.default);
 (0, database_1.default)();
 const PORT = process.env.PORT || 3000;
-console.log('testing');
 app.get("/*", function (req, res) {
     res.sendFile(path_1.default.join(__dirname, "../client/build", "index.html"));
 });

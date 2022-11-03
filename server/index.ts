@@ -4,9 +4,11 @@ import path from 'path';
 import routes from './router';
 import cors from 'cors';
 import helmet from 'helmet';
+import multer from 'multer';
 import mongoose from 'mongoose'
 import dbConnect from './config/database'
 
+const upload = multer ({dest: "uploads/"})
 dotenv.config();
 
 const app = express()

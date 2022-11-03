@@ -1,8 +1,8 @@
 import express from 'express';
-import dbConnect from '../config/database';
 import * as userRegister from '../controller/userController'
 const router = express.Router()
 
-router.post('/register', userRegister.register)
+router.post('/', userRegister.register)
+router.get('/', )
 
 export default router;

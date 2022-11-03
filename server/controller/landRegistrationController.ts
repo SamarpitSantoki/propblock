@@ -24,13 +24,25 @@ const landRegister = async(req: Request, res: Response, next: NextFunction) => {
           landDescription
         })
         if(data){
-            res.status(200).json({message: 'Data uploaded successfully', data: data})
+            res.status(200).json({message: message.dataUploadSuccessful, data: data})
         }else{
-            res.status(200).json({message: 'Data upload failed'})
+            res.status(200).json({message: message.dataUploadFailed})
         }
     } catch (err: any) {
         res.status(200).json({message: err.message})
     }
 }
 
-export {landRegister}
+const getAllLandRegister = async(req: Request, res: Response, next: NextFunction) => {
+    try {
+        let data = await landRegistration.find()
+        if(data){
+            res.status(200).json({data})
+        }else{
+            res.status(200).json({message: message.notFound})
+        }
+    } catch (err: any) {
+        res.status(200).json({message: err.message})
+    }
+}
+export {landRegister, getAllLandRegister}

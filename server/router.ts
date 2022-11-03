@@ -4,6 +4,6 @@ import landRegistrationRoutes from './routes/landResistrationRoutes'
 const router = express.Router()
 
 router.use('/user', userRoutes)
-router.use('/user', landRegistrationRoutes)
+router.use('/registerLand', landRegistrationRoutes)
 
 export default router

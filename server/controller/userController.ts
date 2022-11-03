@@ -41,5 +41,17 @@ const register = async(req: Request, res: Response, next: NextFunction) => {
     }
 }
 
-export {register}
+const getAllUser = async(req: Request, res: Response, next: NextFunction) => {
+    try{
+        let data = await User.find()
+        if(data){
+            res.status(200).json({data})
+        }else{
+            res.status(200).json({message: message.notFound})
+        }
+    }catch(err: any){
+        res.status(200).json({message: err.message})
+    }
+}
+export {register, getAllUser}
 
